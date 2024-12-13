@@ -1,22 +1,70 @@
 import Image from "next/image";
-import localFont from "next/font/local";
-
+import { useRouter } from "next/router";
 
 export default function Home() {
+  const router = useRouter();
   return (
-    <div className="bg-slate-400 text-black flex justify-center items-center h-screen ">
-     <div className="w-5/6 h-4/5 bg-rose-400 border-current columns-2 flex justify-center items-center"  >
-     <div className="w-10 h-full bg-white ml-10 "></div>
-     <div className="w-10 h-full bg-white ml-4 "></div>
-     <div className=" space-y-4 ml-10 ">
-     <p className="text-2xl text-black flex mr-10 ml-10 italic">* Name:Erdenebold</p>
-     <p className="text-2xl text-black flex mr-10 ml-10 italic">* Van Arsdel, Ltd.</p>
-     <p className="text-2xl text-black flex mr-10 ml-10 italic">* 5678 Main St . New york , NY 90123</p>
-     <p className="text-2xl text-black flex mr-10 ml-10 italic">* +976 99586403</p>
-     <p className="text-2xl text-black flex mr-10 ml-10 italic">* tugserdene702@gmail.com</p>
-     </div>
-     <Image src="/favicon.ico" width={400} height={400} className="m-4  mr-24 ml-10 " />
-     </div>
+    <div>
+      <p className="text-center font-bold text-2xl my-10">Бие даалт</p>
+      <div className="flex space-x-10 justify-center items-center">
+        <div className=" w-48 h-56 flex items-center justify-center bg-gray-400 rounded-xl hover:bg-red-500 hover:animate-spin shadow-2xl"
+        onClick={() => {
+          router.push("task1");
+        }}>
+        <p
+          className="border-3 border-blue-400 p-4 mb-4 text-center hover:red-500"
+          
+        >
+          card
+        </p>
+        </div>
+        
+        <div className="w-48 h-56 flex items-center justify-center bg-gray-400 rounded-xl hover:bg-red-500 hover:animate-spin shadow-2xl"
+        onClick={() => {
+          router.push("task1");
+        }}>
+        <p
+          className="  border-3 border-blue-400 p-4 mb-4  text-center"
+          
+        >
+          search
+        </p>
+        </div>
+        <div className="w-48 h-56 flex items-center justify-center bg-gray-400 rounded-xl hover:bg-red-500 hover:animate-spin shadow-2xl"
+         onClick={() => {
+          router.push("task3");
+        }}>
+          <p
+            className=" border-3 border-blue-400 text-center"
+           
+          >
+            weather
+          </p>
+        </div>
+
+        <div className="w-48 h-56 flex items-center justify-center bg-gray-400 rounded-xl hover:bg-red-500 hover:animate-spin shadow-2xl"
+        onClick={() => {
+          router.push("task4");
+        }}>
+        <p
+          className="  border-3 border-blue-400 p-4 mb-4  text-center"
+          
+        >
+          log in
+        </p>
+        </div>
+        <div className="w-48 h-56 flex items-center justify-center bg-gray-400 rounded-xl hover:bg-red-500 hover:animate-spin shadow-2xl"
+         onClick={() => {
+          router.push("task5");
+        }}>
+        <p
+          className="  border-3 border-blue-400 p-4 mb-4  text-center"
+         
+        >
+          group
+        </p>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,5 +1,7 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 export default function Task3() {
+  const router = useRouter();
   return (
     <div className="w-full h-screen flex items-center justify-center bg-black">
       <div className="w-[98%] h-[96%] flex justify-between items-end">
@@ -281,6 +283,9 @@ export default function Task3() {
           </div>
         </div>
       </div>
+      <button onClick={() => {router.back()}} className="w-24 h-12 bg-white rounded-xl font-bold m-4 text-black">
+        Go back
+    </button>
     </div>
   );
 }
